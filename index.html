@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DevCalderon</title>
+    <link rel="shortcut icon" type="image/png" href="./images/circlegreater.ico"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <header id="company-name"><a class="company-link" onclick="openMenu()"><i class="fas fa-code"></i>&nbsp;DevCalderon</a></header>
+        <ul id="navbar-setter" class="navbar-container">
+            <li class="navbar-list"><a class="nav-link" href="#welcome-section">About Me</a></li>
+            <li class="navbar-list"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="navbar-list"><a class="nav-link" href="#Social_media">Social Media</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <div class="col">
+            <main>
+                <section id="welcome-section">
+                    <img class="welcome-img" src="images/profile-pic.jpg" alt="profile-picture" />
+                    <h1>MarkAGCalderon</h1>
+                    <p>I am a Web developer</p>
+                </section>
+
+                <section id="dream">
+                    <i class="fas fa-cloud fa-5x"></i>
+                    <h1>Web Engineer</h1>
+                    <p>a dream, an aspiration to be...</p>
+                </section>
+
+                <section id="skills">
+                    <div class="col">
+                        <header>
+                            <i class="fas fa-code"></i>
+                            <h4>Technologies</h4>
+                        </header>
+                    </div>
+                    <div id="skills-container" class="col col-center">
+                        <div id="chart1"></div>
+                        <div id="chart2"></div>
+                        <div id="chart3"></div>
+                        <div id="chart4"></div>
+                    </div>
+
+                </section>
+
+                <section id="projects">
+                    <div class="col">
+                        <header>
+                            <i class="fas fa-folder"></i>
+                            <h4 class="project-tile">My Projects</h4>
+                        </header>
+                    </div>
+
+                    <div class="col">
+                        <ul id="project-list">
+                            <li>
+                                <a class="project-link" target="_blank" href="https://dexterous-news.firebaseapp.com/">
+                                    <div class="project-container">
+                                        <img class="project-image project-img" src="./images/dexterous-site.png" alt="project-image" />
+                                        <h4 class="project-title">DexterousNews Site</h4>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="project-link" target="_blank" href="https://codepen.io/MarkCalderon/full/rPjqBg">
+                                    <div class="project-container">
+                                        <img class="project-image project-img" src="./images/product-site.png" alt="project-image" />
+                                        <h4 class="project-title">Product Landing Page</h4>
+                                    </div>
+                                </a>
+
+                            </li>
+
+                            <li>
+                                <a class="project-link" target="_blank" href="https://codepen.io/MarkCalderon/pen/maNzBG">
+                                    <div class="project-container">
+                                        <img class="project-image project-img" src="./images/survey-site.png" alt="project-image" />
+                                        <h4 class="project-title">Survey Form</h4>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="project-link" target="_blank" href="https://codepen.io/MarkCalderon/pen/BMRmKO">
+                                    <div class="project-container">
+                                        <img class="project-image project-img" src="./images/documentation-site.png"
+                                            alt="project-image" />
+                                        <h4 class="project-title">Documentation Page</h4>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </section>
+
+                <section id="Social_media">
+                    <header>
+                        <i class="fas fa-comment-medical"></i>
+                        <h4>Social Media</h4>
+                    </header>
+                    <div class="social-container">
+                        <div class="social-list-item"><a id="profile-link" class="social-link" target="_blank" href="https://github.com/MarkCalderon">Github</a></div>
+                        <div class="social-list-item"><a class="social-link" target="_blank" href="#projects">Projects</a></div>
+                        <div class="social-list-item"><a class="social-link" target="_blank" href="https://www.freecodecamp.org/markcalderon">FreeCodeCamp</a></div>
+                    </div>
+
+                </section>
+            </main>
+        </div>
+
+    </div>
+    <!--Functional scripts-->
+    <script src="./scripts/action.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="scripts/skills.js"></script>
+</body>
+
+</html>
