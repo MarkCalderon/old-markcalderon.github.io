@@ -1,0 +1,109 @@
+/**************************************
+_common.scss
+***************************************/
+/* --------------------------
+PARTIALS
+---------------------------*/
+
+.mainSection {
+
+    &__container {
+
+        /* ------------
+        CHILD CONTAINER (CHILD PAGES)
+        --------------*/
+
+        &__content {
+
+            &__header {
+
+                &__textArea {
+
+                    &__text {
+                    }
+
+                    &__subText {
+                    }
+                }
+            }
+
+            &__inner {
+
+                .section__template {
+                    @include section__container;
+
+                    &__header, &__container {
+                        width: 100%;
+                        max-width: 1040px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------
+COMMON CUSTOM ADJUSTMENTS
+---------------------------*/
+/* --------------
+MARGINS
+---------------*/
+.mt--10 {
+    margin-top: 10px;
+}
+.mt--20 {
+    margin-top: 20px;
+}
+.mt--30 {
+    margin-top: 30px;
+}
+.mt--40 {
+    margin-top: 40px;
+}
+
+/* --------------
+TEXT ALIGNMENTS
+---------------*/
+.txt--c {
+    text-align: center;
+}
+.txt--l {
+    text-align: left;
+}
+.txt--r {
+    text-align: right;
+}
+.txt--j {
+    text-align: justify;
+}
+
+/* --------------
+FLEX BOX MODEL
+---------------*/
+
+.flex__field {
+    @include dFlexValue;
+
+    /* --------
+    FLEX OPTIONS
+    ---------*/
+    &.--sa {
+        justify-content: space-around;
+    }
+    &.--fs {
+        justify-content: flex-start;
+    }
+    &.--fe {
+        justify-content: flex-end;
+    }
+    &.--fc {
+        justify-content: center;
+    }
+    &.--vc {
+        align-items: center;
+    }
+    &.--cboth {
+        justify-content: center;
+        align-items: center;
+    }
+}

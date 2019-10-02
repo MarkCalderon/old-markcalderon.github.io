@@ -1,0 +1,427 @@
+@charset "UTF-8";
+/* ---------------------------------------
+main.scss - MAIN
+----------------------------------------*/
+/* --------------------------
+メディアクエリ MIXIN
+---------------------------*/
+/* --------------------------
+ DFLEX
+---------------------------*/
+/* --------------------------
+ ELEMENT CENTER
+---------------------------*/
+/* --------------------------
+ CLEARFIX
+---------------------------*/
+/* --------------------------
+ HAMBURGER MENU BUTTON
+---------------------------*/
+/* --------------------------
+ HOVER OPACITY
+---------------------------*/
+/* --------------------------
+ MEDIA BREAKPOINT
+---------------------------*/
+/* --------------------------
+RENDER TEXT(FOR HI-RES)
+---------------------------*/
+/* --------------------------
+MIXIN: SECTION CONTAINER
+---------------------------*/
+/* --------------------------
+ Z-INDEX ORGANIZER
+---------------------------*/
+/* --------------------------
+ NO SCROLL
+---------------------------*/
+@noScroll {
+  .noScroll {
+    overflow: hidden; } }
+
+/* --------------------------
+ NAVIGATION BUTTON BLOCK
+---------------------------*/
+/* -------------------------
+変数 - VARIABLES
+----------------------------*/
+/* ---------------------------------------------------------
+スタイルリセット - CSS RESET
+----------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-style: normal;
+  font-weight: normal; }
+
+h1, h2, h3, h4, h5, h6, td, th, p, ul, li, dt, dd {
+  font-size: 1em; }
+
+ul li {
+  list-style: none; }
+
+article, header, footer, aside, figure, figcaption, nav, section {
+  display: block; }
+
+a:focus, button:focus {
+  outline: 0; }
+
+button {
+  background: none;
+  border: 0; }
+
+div {
+  font-size: 15px; }
+
+body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+img {
+  vertical-align: bottom; }
+
+/* --------------------------
+FONT
+---------------------------*/
+/* --------------------------
+COLOUR
+---------------------------*/
+/* --------------------------
+Z-INDEX @include z-index(header);
+---------------------------*/
+/* --------------------------
+Break point
+---------------------------*/
+/**************************************
+_base.scss
+***************************************/
+/* ---------------------------------------------------------
+初期設定 - INITIAL SETTING
+----------------------------------------------------------*/
+html {
+  color: #000;
+  background-color: #fff; }
+
+html,
+body {
+  position: relative;
+  font: 16px/1.2 "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+  letter-spacing: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  /* ------------
+    FOR MODAL (STOP SCROLL)
+    --------------*/ }
+  body.noScroll {
+    overflow: hidden; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle; }
+
+table {
+  width: 100%;
+  border-collapse: collapse; }
+
+.clearfix::before, .clearfix::after {
+  content: '';
+  background-image: none;
+  display: table; }
+
+.clearfix::after {
+  clear: both; }
+
+.pc {
+  display: block; }
+
+.sp {
+  display: none; }
+
+/******************************
+    BASE SP
+*******************************/
+@media screen and (max-width: 767px) {
+  html {
+    min-width: 320px; }
+  .pc {
+    display: none; }
+  .sp {
+    display: block; } }
+
+/******************************
+    BASE PC
+*******************************/
+@media screen and (min-width: 768px) {
+  html {
+    width: 100%;
+    min-width: 100%; } }
+
+/* -------------------------
+COMMON
+----------------------------*/
+/**************************************
+_common.scss
+***************************************/
+/* --------------------------
+PARTIALS
+---------------------------*/
+.mainSection__container {
+  /* ------------
+        CHILD CONTAINER (CHILD PAGES)
+        --------------*/ }
+  .mainSection__container__content__inner .section__template {
+    width: 100%; }
+    .mainSection__container__content__inner .section__template__header, .mainSection__container__content__inner .section__template__container {
+      margin: 0 auto;
+      max-width: 100%; }
+    @media screen and (max-width: 767px) {
+      .mainSection__container__content__inner .section__template__header, .mainSection__container__content__inner .section__template__container {
+        width: calc(100% - 30px); } }
+    .mainSection__container__content__inner .section__template__header, .mainSection__container__content__inner .section__template__container {
+      width: 100%;
+      max-width: 1040px; }
+
+/* --------------------------
+COMMON CUSTOM ADJUSTMENTS
+---------------------------*/
+/* --------------
+MARGINS
+---------------*/
+.mt--10 {
+  margin-top: 10px; }
+
+.mt--20 {
+  margin-top: 20px; }
+
+.mt--30 {
+  margin-top: 30px; }
+
+.mt--40 {
+  margin-top: 40px; }
+
+/* --------------
+TEXT ALIGNMENTS
+---------------*/
+.txt--c {
+  text-align: center; }
+
+.txt--l {
+  text-align: left; }
+
+.txt--r {
+  text-align: right; }
+
+.txt--j {
+  text-align: justify; }
+
+/* --------------
+FLEX BOX MODEL
+---------------*/
+.flex__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  /* --------
+    FLEX OPTIONS
+    ---------*/ }
+  .flex__field.--sa {
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .flex__field.--fs {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+  .flex__field.--fe {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+  .flex__field.--fc {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .flex__field.--vc {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .flex__field.--cboth {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+
+/* -------------------------
+変数 - COMPONENTS
+----------------------------*/
+/* --------------
+HEADER
+---------------*/
+.headerContainer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .headerContainer__inner__site {
+    cursor: pointer;
+    -webkit-transition: .2s linear;
+    -o-transition: .2s linear;
+    transition: .2s linear; }
+    .headerContainer__inner__site:hover {
+      opacity: .6; }
+  .headerContainer__inner__directory__list__item {
+    font: 20px "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif; }
+    .headerContainer__inner__directory__list__item a {
+      padding: 10px 20px 10px 20px;
+      display: block;
+      cursor: pointer;
+      -webkit-transition: .2s linear;
+      -o-transition: .2s linear;
+      transition: .2s linear; }
+      .headerContainer__inner__directory__list__item a:hover {
+        opacity: .6; }
+
+/* --------------
+FOOTER
+---------------*/
+/* ------------
+ASIDE CONTAINER
+--------------*/
+.mainSection__container__aside {
+  display: none;
+  width: 200px;
+  height: 672px; }
+  .mainSection__container__aside__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .mainSection__container__aside__inner__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+
+/* ------------
+BUTTONS
+--------------*/
+.button__container .button {
+  cursor: pointer;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear; }
+  .button__container .button:hover {
+    opacity: .6; }
+
+/* --------------
+KV GALLERY
+---------------*/
+.gallerySection {
+  padding: 80px 0; }
+  .gallerySection__header {
+    padding: 30px 0;
+    width: 100%;
+    text-align: center; }
+  .gallerySection__inner {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 900px;
+    overflow: hidden; }
+    .gallerySection__inner .swiper-wrapper .swiper-slide .kv__gallery__image {
+      width: 100%; }
+
+/* --------------
+KV LANDING PAGE
+---------------*/
+.kvSection__inner {
+  position: relative; }
+  .kvSection__inner__imageArea__image {
+    background: center/cover no-repeat url("http://dummyimage.com/800x600/4d494d/686a82.gif&text=placeholder+image");
+    height: 100vh; }
+  .kvSection__inner__textArea {
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 700px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0; }
+    .kvSection__inner__textArea__text, .kvSection__inner__textArea__subText {
+      text-align: center; }
+    .kvSection__inner__textArea__text, .kvSection__inner__textArea__subText {
+      font: 500 40px "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif; }
+
+/* ----------------
+PAGES 
+------------------*/
+/**************************************
+_top.scss
+***************************************/
+.topContent__inner {
+  /* ----------------
+       	TOP SECTION (PC)
+        ------------------*/ }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,36 @@
+/* --------------
+HEADER
+---------------*/
+
+.headerContainer {
+    
+    &__inner {
+        @include dFlexValue(type--vertical);
+
+        &__site {
+            @include hoverOpacity;
+
+            &__logo {
+            }
+        }
+
+        &__directory {
+
+            &__list {
+
+                &__item {
+                    font: 20px $fontFamily;
+
+                    a {
+                        @include navButtonBlock(10px, 20px, 20px);
+                        @include hoverOpacity;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media($maxMobileSize) {
+
+}   

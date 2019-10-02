@@ -1,0 +1,25 @@
+/* --------------
+KV LANDING PAGE
+---------------*/
+.kvSection {
+
+    &__inner {
+        position: relative;
+
+        &__imageArea {
+
+            &__image {
+                background: center / cover no-repeat url('http://dummyimage.com/800x600/4d494d/686a82.gif&text=placeholder+image');
+                height: 100vh;
+            }
+        }
+
+        &__textArea {
+            @include centerElement(700px, 20px, 20px);
+
+            &__text, &__subText {
+                font: 500 40px $fontFamily;
+            }
+        }
+    }
+}
