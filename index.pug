@@ -16,13 +16,18 @@ html(class="no-js" lang="ja")
 	// MAIN
 	div.mainSection
 		//- SPECIFIC PAGE CLASS...
-		div.mainSection__container(class="topContent")
+		div.mainSection__container
 			div.mainSection__container__aside
 			div.mainSection__container__content
-
-				div.mainSection__container__content__inner
+				div.mainSection__container__content__inner(class="topContent")
+					|
+					|
 					// SECTION KV
-					include section/kvSection.pug
+					include section/sectionKV.pug
+					|
+					|
+					// SECTION 01
+					include section/section01.pug
 	|
 	|
 	// FOOTER

@@ -1,15 +1,16 @@
 /* --------------
-KV LANDING PAGE
+SECTION KV
 ---------------*/
-.kvSection {
+.sectionKV {
 
     &__inner {
         position: relative;
 
+        // COMMON RULES
         &__imageArea {
 
             &__image {
-                background: center / cover no-repeat url('http://dummyimage.com/800x600/4d494d/686a82.gif&text=placeholder+image');
+                
                 height: 100vh;
             }
         }
@@ -21,5 +22,13 @@ KV LANDING PAGE
                 font: 500 40px $fontFamily;
             }
         }
+    }
+}
+
+// SPECIFIC PAGES (IMAGE)
+.topSection {
+
+    .sectionKV__inner__imageArea__image {
+        background: center / cover no-repeat url('http://dummyimage.com/800x600/4d494d/686a82.gif&text=placeholder+image');
     }
 }

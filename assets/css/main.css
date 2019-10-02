@@ -387,14 +387,13 @@ KV GALLERY
       width: 100%; }
 
 /* --------------
-KV LANDING PAGE
+SECTION KV
 ---------------*/
-.kvSection__inner {
+.sectionKV__inner {
   position: relative; }
-  .kvSection__inner__imageArea__image {
-    background: center/cover no-repeat url("http://dummyimage.com/800x600/4d494d/686a82.gif&text=placeholder+image");
+  .sectionKV__inner__imageArea__image {
     height: 100vh; }
-  .kvSection__inner__textArea {
+  .sectionKV__inner__textArea {
     margin: auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -408,10 +407,13 @@ KV LANDING PAGE
     transform: translateY(-50%);
     left: 0;
     right: 0; }
-    .kvSection__inner__textArea__text, .kvSection__inner__textArea__subText {
+    .sectionKV__inner__textArea__text, .sectionKV__inner__textArea__subText {
       text-align: center; }
-    .kvSection__inner__textArea__text, .kvSection__inner__textArea__subText {
+    .sectionKV__inner__textArea__text, .sectionKV__inner__textArea__subText {
       font: 500 40px "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif; }
+
+.topSection .sectionKV__inner__imageArea__image {
+  background: center/cover no-repeat url("http://dummyimage.com/800x600/4d494d/686a82.gif&text=placeholder+image"); }
 
 /* ----------------
 PAGES 
@@ -419,9 +421,11 @@ PAGES
 /**************************************
 _top.scss
 ***************************************/
-.topContent__inner {
+.topContent {
   /* ----------------
-       	TOP SECTION (PC)
-        ------------------*/ }
+   	TOP (PC)
+    ------------------*/ }
+  .topContent .section01__inner {
+    background: red; }
 
 /*# sourceMappingURL=main.css.map */
