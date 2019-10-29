@@ -30,19 +30,24 @@ function viewport(){
 SWIPER FUNCTION
 ----------------------------------------*/
 function loadSwiper() {
-  	var swiper = new Swiper('.slider', {
+  	var swiper = new Swiper('.section02__inner__gallery', {
 	  	autoplay: {
-	  		delay: 4000,
+	  		delay: 2000,
 	  		disableOnInteraction: false,
-	  	}
+	  	},
+      loop: true,
+      autoHeight: true,
+      slidesPerGroup: 1,
+      slidesPerView: 5,
+      spaceBetween: 0,
 	});
 }
 
 /* ---------------------------------------
 EVENT HANDLER: ON READY
 ----------------------------------------*/
-$(function () {
-	// loadSwiper();
+$(function() {
+	loadSwiper();
 	// viewport();
 });
 

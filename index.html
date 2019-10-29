@@ -8,14 +8,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=yes">
     
     <!-- META INFO -->
-    <meta name="description" content="XXXXXXXXXXXXXXXXX">
-    <meta name="keywords" content="XXXXXXXXXXXXXXX">
+    <meta name="description" content="Portfolio showcase by Mark Angeo G. Calderon">
+    <meta name="keywords" content="front-end developer, developer, software engineer">
     
-    <title>TITLE</title>
+    <title>DEVCALDERON | front-end developer</title>
     
+    <!-- FAVICON-->
+    <link rel="shortcut icon" href="./assets/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/img/favicon/favicon.ico" type="image/x-icon">
     
     <!-- CSS-->
     <link href="./assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Caveat&amp;display=swap" rel="stylesheet">
     
   </head>
   <body id="top"></body>
@@ -23,12 +27,12 @@
   <!-- HEADER-->
   <header class="headerContainer">
     <div class="headerContainer__inner">
-      <div class="headerContainer__inner__site"><a href="./"><img class="headerContainer__inner__name" src="http://placekitten.com/30/30"></a></div>
+      <div class="headerContainer__inner__site"><a href="./"><img class="headerContainer__inner__name" src="./../assets/img/common/portfolio-02.png"></a></div>
       <div class="headerContainer__inner__directory">
         <ul class="headerContainer__inner__directory__list flex__field">
-          <li class="headerContainer__inner__directory__list__item"><a href="./">Home</a></li>
-          <li class="headerContainer__inner__directory__list__item"><a href="./">About</a></li>
-          <li class="headerContainer__inner__directory__list__item"><a href="./">Contact</a></li>
+          <li class="headerContainer__inner__directory__list__item"><a href="https://twitter.com/markzev0" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li class="headerContainer__inner__directory__list__item"><a href="https://github.com/MarkCalderon" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li class="headerContainer__inner__directory__list__item"><a href="https://www.linkedin.com/in/markcalderon/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
         </ul>
       </div>
     </div>
@@ -46,10 +50,11 @@
           <section class="sectionKV">
             <div class="sectionKV__inner">
               <div class="sectionKV__inner__imageArea topSection">
-                <div class="sectionKV__inner__imageArea__image" alt="placeholder+image"></div>
+                <div class="sectionKV__inner__imageArea__image"></div>
               </div>
               <div class="sectionKV__inner__textArea">
-                <p class="sectionKV__inner__textArea__text"> Lorem ipsum dolor sit amet</p>
+                <h1 class="sectionKV__inner__textArea__text">Mark Angeo Calderon</h1>
+                <h2 class="sectionKV__inner__textArea__subText">Front end web developer</h2>
               </div>
             </div>
           </section>
@@ -57,10 +62,25 @@
           <!-- SECTION 01-->
           <section class="section01">
             <div class="section01__inner">
-              <div class="section01__inner__textArea">
-                <p class="section01__inner__textArea__text">hello world</p>
+              <div class="section01__inner__recentActivity">
+                <h2 class="section01__inner__recentActivity__header">RECENT ACTIVITY</h2>
+                <div class="section01__inner__recentActivity__textArea twitter-container"><a class="twitter-timeline" data-tweet-limit="1" data-height="500" data-width="600" data-chrome="nofooter noborders noscrollbar noheader transparent" href="https://twitter.com/markzev0?ref_src=twsrc%5Etfw">Tweets by markzev0</a>
+                  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+              </div>
+              <div class="section01__inner__about">
+                <div class="section01__inner__about__developerSkill">
+                  <h2 class="section01__inner__about__developerSkill__header">KNOWLEDGE BASE</h2>
+                  <div class="section01__inner__about__developerSkill__skillList"><a class="section01__inner__about__developerSkill__skillList__item" href="" target="_blank"><i class="fab fa-html5"></i></a><a class="section01__inner__about__developerSkill__skillList__item" href="" target="_blank"><i class="fab fa-css3-alt"></i></a><a class="section01__inner__about__developerSkill__skillList__item" href="" target="_blank"><i class="fab fa-js"></i></a><a class="section01__inner__about__developerSkill__skillList__item" href="" target="_blank"><i class="fab fa-sass"></i></a><a class="section01__inner__about__developerSkill__skillList__item" href="" target="_blank"><i class="fab fa-wordpress"></i></a><a class="section01__inner__about__developerSkill__skillList__item" href="https://git-scm.com/" target="_blank"><i class="fab fa-git"></i></a><a class="section01__inner__about__developerSkill__skillList__item skill--text" href="https://pugjs.org/api/getting-started.html" target="_blank">PUGJS</a><a class="section01__inner__about__developerSkill__skillList__item skill--text" href="http://getbem.com/" target="_blank">BEM</a></div>
+                </div>
               </div>
             </div>
+          </section>
+          
+          <!-- SECTION 02-->
+          <section class="section02">
+            <h2 class="section02__header"> </h2>
+            <div class="section02__inner"></div>
           </section>
         </div>
       </div>
@@ -68,13 +88,10 @@
   </div>
   
   <!-- FOOTER-->
-  <footer class="footerContainer">
-    <div class="footerContainer__inner">
-      <div class="footerContainer__inner__site"><img class="footerContainer__inner__site__logo" src="http://placekitten.com/30/30" alt="footer logo"></div>
-      <div class="footerContainer__inner__copyrightTextArea"><span class="footerContainer__inner__copyrightTextArea__text">Copyright (C) 2019 TITLE All Rights Reserved.</span></div>
-    </div>
-  </footer>
+  
   
   <!-- SCRIPT-->
+  <script src="https://kit.fontawesome.com/701b19f690.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script src="./assets/js/main.js"></script>
 </html>
