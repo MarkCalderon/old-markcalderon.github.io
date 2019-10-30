@@ -1,0 +1,120 @@
+/**************************************
+_top.scss
+***************************************/
+
+.topContent {
+    /* ----------------
+   	TOP (PC)
+    ------------------*/
+    .section01 {
+		margin-top: 50px;
+    	padding: 200px 0;
+		position: relative;
+		background: rgba(255,255,255,0.8);
+		@include z-index(top);
+
+    	&__inner {
+    	@include centerContent(1440px, 20px, 20px);
+    		@include dFlexValue(type--horizontal);
+
+    		&__recentActivity {
+    			max-width: 600px;
+    			padding: 0 20px;
+    			box-sizing: border-box;
+
+		    	&__header {
+					font: 500 40px $fontFamily;
+					letter-spacing: -2px;
+					text-align: center;
+					background: rgba(255,255,255,0.26);
+		    	}
+
+    			&__textArea {
+		    		margin-top: 70px;
+    				display: inline-block;
+    				font: 500 60px $fontFamily;
+    			}
+    		}
+
+    		&__about {
+    			padding: 0 20px;
+    			max-width: 600px;
+    			box-sizing: border-box;
+
+    			&__role {
+					text-align: center;
+					font-size: 30px;
+    			}
+
+	    		&__developerSkill {
+	    			@include dFlexValue;
+	    			flex-direction: column;
+	    			align-items: center;
+	    			justify-content: flex-start;
+
+			    	&__header {
+			    		width: 100%;
+			    		text-align: center;
+						font: 500 40px $fontFamily;
+						letter-spacing: -2px;
+						background: rgba(255,255,255,0.26);
+			    	}
+
+		    		&__skillList {
+		    			max-width: 500px;
+		    			margin-top: 50px;
+		    			@include dFlexValue;
+
+		    			&__item {
+		    				min-width: 50px;
+		    				min-height: 50px;
+		    				@include dFlexValue(type--all);
+		    				margin: 30px 30px 0 30px;
+		    				font-size: 50px;
+		    				@include hoverOpacity;
+
+		    				&.skill--text {
+		    					font-size: 30px;
+		    				}
+		    			}
+		    		}
+	    		}
+    		}
+
+    		
+    	}
+    }
+
+    .section02 {
+    	position: relative;
+    	@include z-index(top);
+    	background: $black_2;
+
+    	&__header {
+    		position: absolute;
+			font: 500 80px $fontFamily;
+			letter-spacing: -5px;
+    	}
+
+    	&__inner {
+    		background: $black_2;
+
+			&__gallery {
+				padding: 0 20px;
+				max-height: 500px;
+				overflow: hidden;
+
+				.swiper-wrapper {
+
+					.swiper-slide {
+						img {
+							max-width: 300px;
+						}
+					}
+				}
+			}
+    	}
+    }
+}
+
+

@@ -1,0 +1,84 @@
+/**************************************
+_base.scss
+***************************************/
+
+/* ---------------------------------------------------------
+初期設定 - INITIAL SETTING
+----------------------------------------------------------*/
+html {
+    color: $black;
+    background-color: $white;
+}
+
+html,
+body {
+    position: relative;
+    font: 16px/1.2 $fontFamily;
+    letter-spacing: normal;
+    @include renderText;
+}
+
+body { 
+    /* ------------
+    FOR MODAL (STOP SCROLL)
+    --------------*/
+    &.noScroll {
+        overflow: hidden;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+.pc{
+    display: block;
+}
+
+.sp{
+    display: none;
+}
+
+/******************************
+    BASE SP
+*******************************/
+
+@include media($maxMobileSize) {
+    html {
+        min-width: $minMobileSize;
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .sp {
+        display: block;
+    }
+}
+
+/******************************
+    BASE PC
+*******************************/
+@media screen and (min-width: $minPCSize) {
+    html {
+        width: 100%;
+        min-width: $minPCContentSize;
+    }
+}

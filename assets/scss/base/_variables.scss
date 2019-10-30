@@ -1,0 +1,37 @@
+/* --------------------------
+FONT
+---------------------------*/
+$fontFamily: 'Oswald', sans-serif;
+// $fontFamily1: 'Tsukushi A Round Gothic', 'Tsukushi B Round Gothic', 'ヒラギノ丸ゴ Pro W4', 'ヒラギノ丸ゴ Pro',  'Hiragino Maru Gothic Pro', '游ゴシック', YuGothic, 'Hiragino Kaku Gothic ProN', 'HG丸ｺﾞｼｯｸM-PRO', 'HGMaruGothicMPRO', Meiryo, sans-serif;
+// $fontFamily: Helvetica Neue, Helvetica, Arial, '游ゴシック', YuGothic, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+// $fontFamily1: Helvetica Neue, Helvetica, Arial, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+$fontfamily4: 'Times New Roman', '游明朝', YuMincho, 'Hiragino Mincho ProN', Meiryo, serif;
+$fontfamily5: 'Times New Roman', 'Hiragino Mincho ProN', Meiryo, serif;
+$fontFamily1: 'Caveat', cursive;
+/* --------------------------
+COLOUR
+---------------------------*/
+$white: #fff;
+$black: #000;
+$black_2: #292f33;
+
+/* --------------------------
+Z-INDEX @include z-index(header);
+---------------------------*/
+$z-index: (
+  kvImage: 10,
+  kvText: 20,
+  header: 30,
+  top: 40,
+);
+
+/* --------------------------
+Break point
+---------------------------*/
+$minPCSize: 768px;
+$maxPCSize: 1440px;
+// $minPCContentSize: 1440px;
+$minPCContentSize: 100%;
+$minMobileSize: 320px;
+$maxMobileSize: 767px;
+$minMobileContentSize: 290px;

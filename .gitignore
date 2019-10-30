@@ -1,0 +1,13 @@
+node_modules/
+/tmp
+/src
+/build
+# /htaccess
+# .htaccess
+# .htpasswd
+# readme.html
+# readme.md
+package.json
+package-lock.json
+gulpfile.js
+.sublime-workspace

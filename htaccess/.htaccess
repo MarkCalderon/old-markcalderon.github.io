@@ -1,0 +1,12 @@
+# rewrite for CPI
+Options +SymLinksIfOwnerMatch
+RewriteEngine on
+
+# Basic authentication
+AuthUserFile /home/REPLACED/html/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Protected Area"
+AuthType Basic
+<Limit GET POST>
+require valid-user
+</Limit>

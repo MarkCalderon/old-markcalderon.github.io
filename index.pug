@@ -1,0 +1,38 @@
+include includes/settings.pug
+
+doctype html
+|
+|
+html(class="no-js" lang="ja")
+	|
+	include includes/head.pug
+	body(id="top")
+	|
+	|
+	// HEADER
+	include includes/header.pug
+	|
+	|
+	// MAIN
+	div.mainSection
+		//- SPECIFIC PAGE CLASS...
+		div.mainSection__container
+			div.mainSection__container__aside
+			div.mainSection__container__content
+				div.mainSection__container__content__inner(class="topContent")
+					|
+					|
+					// SECTION KV
+					include section/sectionKV.pug
+					|
+					|
+					// SECTION 01
+					include section/section01.pug
+					|
+					|
+					// SECTION 02
+					include section/section02.pug
+	|
+	|
+	// FOOTER
+	include includes/footer.pug
