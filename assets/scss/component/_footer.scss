@@ -3,6 +3,10 @@ FOOTER
 ---------------*/
 
 .footerContainer {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background: $black;
 
     &__inner {
 

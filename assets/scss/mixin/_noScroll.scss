@@ -1,7 +1,7 @@
 /* --------------------------
  NO SCROLL
 ---------------------------*/
-@noScroll {
+@mixin noScroll {
 	&.noScroll {
 	    overflow: hidden;
 	}

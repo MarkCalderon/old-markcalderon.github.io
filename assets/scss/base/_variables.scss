@@ -21,8 +21,9 @@ Z-INDEX @include z-index(header);
 $z-index: (
   kvImage: 10,
   kvText: 20,
-  header: 30,
+  header: 60,
   top: 40,
+  onTop: 50,
 );
 
 /* --------------------------

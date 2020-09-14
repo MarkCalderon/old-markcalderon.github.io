@@ -10,12 +10,17 @@ _top.scss
 		margin-top: 50px;
     	padding: 200px 0;
 		position: relative;
-		background: rgba(255,255,255,0.8);
+		background: linear-gradient(to bottom,
+		rgba(255,255,255,0) 10%
+		rgba(255,255,255,0.1) 30%, 
+		rgba(255,255,255,1) 100%);
 		@include z-index(top);
+		overflow: hidden;
 
     	&__inner {
-    	@include centerContent(1440px, 20px, 20px);
-    		@include dFlexValue(type--horizontal);
+    		@include centerContent(1440px, 20px, 20px);
+			@include dFlexValue(type--horizontal);
+			
 
     		&__recentActivity {
     			max-width: 600px;
@@ -23,8 +28,8 @@ _top.scss
     			box-sizing: border-box;
 
 		    	&__header {
-					font: 500 40px $fontFamily;
-					letter-spacing: -2px;
+					font: 500 50px $fontFamily;
+					letter-spacing: .01em;
 					text-align: center;
 					background: rgba(255,255,255,0.26);
 		    	}
@@ -55,8 +60,8 @@ _top.scss
 			    	&__header {
 			    		width: 100%;
 			    		text-align: center;
-						font: 500 40px $fontFamily;
-						letter-spacing: -2px;
+						font: 500 50px $fontFamily;
+						letter-spacing: .01em;
 						background: rgba(255,255,255,0.26);
 			    	}
 
@@ -82,39 +87,166 @@ _top.scss
     		}
 
     		
-    	}
+		}
+
+		&__behindText {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			right: 0;
+			z-index: -2;
+			font-size: 600px;
+			text-align: center;
+			color: rgba($black, 0.03);
+			user-select: none;
+		}
+		
+		.inner__serviceList {
+			display: flex;
+			text-align: center;
+		}
+
+		.serviceList__item {
+			height: 250px;
+			width: 250px;
+			border-radius: 50%;
+			background: rgba($white, 0.8);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			user-select: none;
+
+			&:nth-child(2) {
+				margin: 0 50px;
+			}
+			
+			figcaption {
+				margin-top: 30px;
+				font-size: 25px;
+				font-weight: 700;
+			}
+		}
+
+		.serviceList__itemIcon {
+			font-size: 40px;
+		}
     }
 
     .section02 {
-    	position: relative;
-    	@include z-index(top);
-    	background: $black_2;
+		box-sizing: border-box;
+		padding: 80px 50px;
+		width: 100%;
+		background: $white;
+		position: relative;
+		@include z-index(onTop);
 
     	&__header {
-    		position: absolute;
-			font: 500 80px $fontFamily;
-			letter-spacing: -5px;
-    	}
+			font: 500 50px $fontFamily;
+			letter-spacing: .01em;
+		}
 
-    	&__inner {
-    		background: $black_2;
+		.inner__listArea {
+			margin-top: 50px;
+			display: flex;
+			justify-content: flex-start;
+			flex-flow: nowrap;
+		}
 
-			&__gallery {
-				padding: 0 20px;
-				max-height: 500px;
-				overflow: hidden;
+		.listArea__item {
+			width: calc(100% / 3 - 32px);
+			min-width: 250px;
+			height: 296px;
+			overflow: hidden;
+			position: relative;
+			border-top-right-radius: 15px;
+			
+			&:not(:nth-child(3n)) {
+				margin-right: 47px;
+			}
+			
+			&:nth-child(n+4) {
+				margin-top: 47px;
+			}
 
-				.swiper-wrapper {
+			&:after {
+				content: '';
+				width: 50%;
+				height: 10px;
+				position: absolute;
+				bottom: 36px;
+				right: 0;
+				background: rgba(#000, 0.7);
+				transition: 1s ease;
+			}
 
-					.swiper-slide {
-						img {
-							max-width: 300px;
-						}
-					}
+			&:hover {
+			
+				.thumbArea__bg  {
+					transform: scale(1.1);
+				}
+
+				&:after {
+					background: #516124;
+					width: 90%;
+				}
+
+				.item__title {
+					color: #516124;
+				}
+
+				.thumbArea__statContent {
+					transform: scale(1.5);
 				}
 			}
-    	}
-    }
+		
+
+		}
+
+		.item__title {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			background: white;
+			padding-top: 10px;
+			font-size: 30px;
+		}
+
+		.item__thumbArea {
+			width: 100%;
+			height: 250px;
+			
+			.thumbArea__bg {
+				transition: 1s ease;
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+
+			.thumbArea__statContent {
+				position: absolute;
+				opacity: 1;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: calc(100% - 46px);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: 1s ease;
+
+				.statContent__num01 {
+					font-size: 40px;
+					color: $white;
+				}
+			}
+		}
+
+
+	}
 }
 
 
