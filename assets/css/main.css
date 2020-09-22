@@ -476,7 +476,7 @@ SECTION KV
   margin: auto;
   padding-left: 20px;
   padding-right: 20px;
-  max-width: 700px;
+  max-width: 1000px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
@@ -492,12 +492,12 @@ SECTION KV
   text-align: center;
 }
 .sectionKV__inner__textArea__text, .sectionKV__inner__textArea__subText {
-  font: 500 80px "Caveat", cursive;
+  font: 300 60px "Roboto Slab", serif;
   text-transform: sentence;
 }
 .sectionKV__inner__textArea__subText {
-  font: 300 25px "Caveat", cursive;
-  text-transform: uppercase;
+  font: 100 25px "Roboto Slab", serif;
+  text-transform: sentence;
 }
 
 .topSection .sectionKV__inner__imageArea__image {

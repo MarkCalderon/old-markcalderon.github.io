@@ -1,6 +1,6 @@
 node_modules/
 /tmp
-/src
+/dist
 /build
 # /htaccess
 # .htaccess
