@@ -16,7 +16,6 @@ main.scss - MAIN
 @import "mixin/zIndexOz";
 @import "mixin/noScroll";
 @import "mixin/centerContent";
-
 @import "mixin/navButtonBlock";
 
 /* -------------------------
@@ -35,10 +34,6 @@ COMMON
 変数 - COMPONENTS
 ----------------------------*/
 @import "component/header";
-@import "component/footer";
-@import "component/aside";
-@import "component/button";
-@import "component/gallerySlider";
 @import "component/sectionKV";
 
 /* ----------------
