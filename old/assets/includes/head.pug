@@ -1,0 +1,49 @@
+head 
+	meta(charset="utf-8")
+	meta(http-equiv="X-UA-Compatible" content="IE=edge")
+	meta(name="format-detection" content="telephone=no")
+	meta(name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=yes")
+	|
+	|
+	// META INFO 
+	|
+	meta(name="description", content=page_description)
+	meta(name="keywords", content=page_keywords)
+	|
+	//- SEO CONFIGURATION [SET DIRECTORY ONLY]
+	if isSocialSEO
+		meta(property="og:title", content=page_title)
+		meta(property="og:type", content=page_type)
+		meta(property="og:description", content=page_description)
+		meta(property="og:url", content=page_url)
+		meta(property="og:image", content=page_image)
+		meta(name="twitter:card", content=tw_app_card)
+		meta(name="twitter:image:src", content=page_image)
+		meta(name="twitter:site", content=tw__site)
+		meta(name="twitter:creator", content=tw__creator)
+		meta(property="fb:app_id", content=fb_app_id)
+	//- END OF STYLE CONFIGURATION
+	|
+	|
+	title #{site_name}
+	|
+	|
+	if isFavicon
+		// FAVICON
+		link(rel="shortcut icon" href="./assets/img/favicon/favicon.ico" type="image/x-icon")
+		link(rel="icon" href="./assets/img/favicon/favicon.ico" type="image/x-icon")
+	|
+	|
+	// CSS
+	|
+	//- STYLE CONFIGURATION [SET DIRECTORY ONLY]
+	if isSwiper
+		link(href="./assets/css/swiper.min.css" rel="stylesheet")
+	if isAOE
+		link(href="./assets/css/aoe.css" rel="stylesheet")
+	//- END OF STYLE CONFIGURATION
+	|
+	link(href="./assets/css/main.css" rel="stylesheet")
+	link(href="https://fonts.googleapis.com/css?family=Oswald|Caveat&display=swap" rel="stylesheet")
+	|
+	|

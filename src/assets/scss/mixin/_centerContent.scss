@@ -1,0 +1,7 @@
+@mixin centerContent($width, $padding-left, $padding-right) {
+	max-width: $width;
+	padding-left: $padding-left;
+	padding-right: $padding-right;
+	margin: auto;
+	box-sizing: border-box;
+}

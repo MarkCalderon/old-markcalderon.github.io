@@ -1,0 +1,8 @@
+/* --------------------------
+ NO SCROLL
+---------------------------*/
+@mixin noScroll {
+	&.noScroll {
+	    overflow: hidden;
+	}
+}

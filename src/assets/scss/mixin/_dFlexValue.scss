@@ -1,0 +1,28 @@
+/* --------------------------
+ DFLEX
+---------------------------*/
+
+@mixin dFlexValue($type: 'false') {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    @if $type == 'type--all' {
+        align-items: center;
+        justify-content: center;
+    }
+    @elseif $type == 'type--vertical' {
+        align-items: center;
+    }
+    @elseif $type == 'type--horizontal' {
+        justify-content: center;
+    }
+    @else if $type == 'type--direction--column' {
+        flex-direction: column;
+    }
+    @elseif $type =='type--all--column' {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

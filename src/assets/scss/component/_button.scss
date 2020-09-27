@@ -1,0 +1,10 @@
+/* ------------
+BUTTONS
+--------------*/
+
+.button__container {
+
+    .button {
+        @include hoverOpacity;
+    }
+}

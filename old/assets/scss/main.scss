@@ -1,0 +1,47 @@
+/* ---------------------------------------
+main.scss - MAIN
+----------------------------------------*/
+
+/* --------------------------
+メディアクエリ MIXIN
+---------------------------*/
+@import "mixin/dFlexValue";
+@import "mixin/centerElement";
+@import "mixin/clearFix";
+@import "mixin/hamburgerMenu";
+@import "mixin/hoverOpacity";
+@import "mixin/mediaBreak";
+@import "mixin/renderText";
+@import "mixin/sectionContainer";
+@import "mixin/zIndexOz";
+@import "mixin/noScroll";
+@import "mixin/centerContent";
+
+@import "mixin/navButtonBlock";
+
+/* -------------------------
+変数 - VARIABLES
+----------------------------*/
+@import "base/reset";
+@import "base/variables";
+@import "base/initial";
+
+/* -------------------------
+COMMON
+----------------------------*/
+@import "base/common";
+
+/* -------------------------
+変数 - COMPONENTS
+----------------------------*/
+@import "component/header";
+@import "component/footer";
+@import "component/aside";
+@import "component/button";
+@import "component/gallerySlider";
+@import "component/sectionKV";
+
+/* ----------------
+PAGES 
+------------------*/
+@import "pages/top";

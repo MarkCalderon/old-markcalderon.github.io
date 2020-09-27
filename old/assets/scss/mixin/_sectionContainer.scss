@@ -1,0 +1,18 @@
+/* --------------------------
+MIXIN: SECTION CONTAINER
+---------------------------*/
+@mixin section__container {
+    width: 100%;
+
+    &__header, &__container {
+        margin: 0 auto;
+        max-width: $minPCContentSize;
+    }
+
+    @include media($maxMobileSize) {
+
+        &__header, &__container {
+            width: calc(100% - 30px);
+        }
+    }
+}
