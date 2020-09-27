@@ -5,7 +5,6 @@ const CopyPlugin = require('copy-webpack-plugin')
 module.exports = {
     mode: "development",
     // Watch if there are any changes in directory.
-    // watch: true,
     // Required: To include source map for browser debugging.
     devtool: 'source-map',
     // Files that you want to process.

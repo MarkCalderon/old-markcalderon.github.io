@@ -1,8 +1,0 @@
-/* --------------------------
- MEDIA BREAKPOINT
----------------------------*/
-@mixin media($breakPoint) {
-    @media screen and (max-width: $breakPoint) {
-        @content;
-    }
-}

@@ -1,7 +1,0 @@
-/* --------------------------
- NAVIGATION BUTTON BLOCK
----------------------------*/
-@mixin navButtonBlock($padding-y: 15px, $padding-left: 15px, $padding-right: 15px) {
-	padding: $padding-y $padding-right $padding-y $padding-left;
-	display: block;
-}

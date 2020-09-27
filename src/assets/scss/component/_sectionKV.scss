@@ -1,50 +1,46 @@
 /* --------------
 SECTION KV
 ---------------*/
-.sectionKV {
+.kvSec {
     // height: 800px;
     // overflow: hidden;
 
     &__inner {
         height: 100vh;
         position: relative;
+    }
 
+    &__innerImageArea {
+        @include z-index(kvImage);
 
-        // COMMON RULES
-        &__imageArea {
-            @include z-index(kvImage);
+        &.topSection {
 
-            &__image {
-                
-                height: calc(100vh - 100px);
-            }
-        }
-
-        &__textArea {
-            @include centerElement(1000px, 20px, 20px);
-            padding: 35px 0;
-
-            &__text, &__subText {
-                font: 300 60px $Roboto;
-                text-transform: sentence;
-            }
-
-            &__subText {
-                font: 100 25px $Roboto;
-                text-transform: sentence;
+            .kvSec__innerImageThumb {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: center / cover no-repeat url('./../img/top/kvSection-bg-01.jpg');
             }
         }
     }
-}
 
-// SPECIFIC PAGES (IMAGE)
-.topSection {
+    &__innerImageThumb {
+        height: calc(100vh - 100px);
+    }
 
-    .sectionKV__inner__imageArea__image {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        // background: $black_2;
-        background: center / cover no-repeat url('./../img/top/kvSection-bg-01.jpg');
+    &__innerTextArea {
+        @include centerElement(1000px, 20px, 20px);
+        padding: 35px 0;
+    }
+
+    &__innerTextAreaName, &__innerTextAreaTitle {
+        font: 300 60px $Roboto;
+        text-align: center;
+        text-transform: sentence;
+    }
+
+    &__innerTextAreaTitle {
+        font: 100 25px $Roboto;
+        text-transform: sentence;
     }
 }

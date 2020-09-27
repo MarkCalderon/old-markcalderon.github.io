@@ -21,7 +21,6 @@ const statItem = [
     }
 ]
 
-
 const StatSec = () => {
     return (
         <section className="statSec">
@@ -33,7 +32,7 @@ const StatSec = () => {
                             <div key={i} className="statSec__listAreaItem">
                                 <figure className="statSec__listAreaImageArea">
                                     <div className="statSec__listAreaImageThumb" style={{backgroundImage: 'url(' + item.backgroundImage + ')'}}></div>
-                                    <figcaption className="__statContent">{item.num}</figcaption>
+                                    <figcaption className="statSec__statContent">{item.num}</figcaption>
                                 </figure>
                                 <h4 className="statSec__title">{item.title}</h4>
                             </div>
