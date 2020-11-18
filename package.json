@@ -1,0 +1,45 @@
+{
+  "name": "markcalderon.github.io",
+  "version": "1.0.0",
+  "description": "This is a portfolio site",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "gulp-pug": "^4.0.1",
+    "html-validator": "^5.1.17",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "webpack": "^4.44.2"
+  },
+  "browserslist": [
+    "<2%",
+    "ie 11",
+    "not dead"
+  ],
+  "scripts": {
+    "start": "webpack-dev-server --history-api-fallback",
+    "build:pro": "webpack --mode production",
+    "build:dev": "webpack-dev-server --history-api-fallback && webpack --watch --mode development"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "autoprefixer": "^9.8.2",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.1.1",
+    "css-loader": "^4.3.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^7.10.0",
+    "eslint-loader": "^4.0.2",
+    "mini-css-extract-plugin": "^0.11.2",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^4.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "resolve-url-loader": "^3.1.1",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

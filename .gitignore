@@ -7,7 +7,5 @@ node_modules/
 # .htpasswd
 # readme.html
 # readme.md
-package.json
-package-lock.json
 gulpfile.js
 .sublime-workspace
