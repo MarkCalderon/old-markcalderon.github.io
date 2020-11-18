@@ -30,17 +30,19 @@ SECTION KV
 
     &__innerTextArea {
         @include centerElement(1000px, 20px, 20px);
+        width: 100%;
         padding: 35px 0;
     }
 
     &__innerTextAreaName, &__innerTextAreaTitle {
         font: 300 60px $Roboto;
         text-align: center;
-        text-transform: sentence;
+        @include media(768px) {
+			font-size: 50px;
+		}
     }
 
     &__innerTextAreaTitle {
         font: 100 25px $Roboto;
-        text-transform: sentence;
     }
 }

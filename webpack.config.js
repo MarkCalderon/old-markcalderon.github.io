@@ -93,6 +93,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
+                        cacheDirectory: true,
                         presets: 
                             [
                                 // For normal ES6 Cross-compatibility Support
@@ -100,7 +101,6 @@ module.exports = {
                                 // For React Support
                                 '@babel/preset-react'
                             ],
-                        cacheDirectory: true,
                     },
                 },
             },
@@ -119,6 +119,9 @@ module.exports = {
                     to: path.resolve(__dirname, 'dist/assets/img'),
                 },
             ],
+            options: {
+                concurrency: 100,
+            },
         }),
     ],
 }
