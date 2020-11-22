@@ -21,10 +21,12 @@ module.exports = {
         filename: 'assets/js/[name].js'
     },
     devServer: {
-        // Shows errors instead of loading site
+        // Shows/ends process if there is error instead of skipping.
         overlay: true,
-        // Watches assets file changes
-        watchContentBase: true,
+        // Shows errors instead of loading site
+        stats: 'errors-only',
+        // Watches assets file changes 
+        // #watchContentBase: true, // (On by default)
         // Set where the server will serve assets from/similar to public_html/.
         // Set to SRC when serving for HOT (*Not suitable for Production)
         contentBase: path.resolve(__dirname, './src/'),
@@ -32,12 +34,15 @@ module.exports = {
         compress: true,
         // Show logs on Dev Tools.
         inline: true,
+        // Disables live reloading
+        liveReload: false,
         // Hot Module Replacement: Loads changes dynamically without reloading page.
-        hot: true,
+        hot: true, // (On by default)
         // Observes if there are any changes on the contentBase path.
         watchOptions: { 
             aggregateTimeout: 300,
-            poll: 1000 
+            poll: true,
+            ignored: '/node_modules/',
         },
         // Opens a browser, after successfull build.
         open: true,
