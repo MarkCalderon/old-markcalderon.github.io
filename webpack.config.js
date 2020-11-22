@@ -21,8 +21,13 @@ module.exports = {
         filename: 'assets/js/[name].js'
     },
     devServer: {
+        // Shows errors instead of loading site
+        overlay: true,
+        // Watches assets file changes
+        watchContentBase: true,
         // Set where the server will serve assets from/similar to public_html/.
-        contentBase: path.resolve(__dirname, './dist/'),
+        // Set to SRC when serving for HOT (*Not suitable for Production)
+        contentBase: path.resolve(__dirname, './src/'),
         // Compress assets using gzip compression.
         compress: true,
         // Show logs on Dev Tools.
@@ -30,19 +35,19 @@ module.exports = {
         // Hot Module Replacement: Loads changes dynamically without reloading page.
         hot: true,
         // Observes if there are any changes on the contentBase path.
-        watchContentBase: true,
-        // Opens a browser, after successfull build.
-        open: true,
-        // Sets where the assets are served from.
-        publicPath: '/assets/',
-        // Server Port
-        port: 9000,
-        // Allows pages to load exactly when routing to multiple pages
-        historyApiFallback: true,
         watchOptions: { 
             aggregateTimeout: 300,
             poll: 1000 
         },
+        // Opens a browser, after successfull build.
+        open: true,
+        // Sets where the assets are served from.
+        publicPath: '/',
+        // Server Port
+        port: 9000,
+        // Allows pages to load exactly when routing to multiple pages
+        historyApiFallback: true,
+        // For CORs/ HEADER setting
         headers: {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
@@ -108,7 +113,8 @@ module.exports = {
                         },
                     },
                     // Add browser prefixes and minify CSS.
-                    { loader: 'postcss-loader', options: { 
+                    { 
+                        loader: 'postcss-loader', options: { 
                         sourceMap: true,
                         postcssOptions: {
                             plugins: [

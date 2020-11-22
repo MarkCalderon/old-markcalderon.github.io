@@ -8,12 +8,16 @@ HEADER
     @include z-index(header);
     
     &__inner {
-        @include dFlexValue(type--all);
+        @include u-flex($jc: center, $ai: center);
     }
 
     &__innerSite {
         @include hoverOpacity;
             max-width: 150px;
+    }
+
+    &__innerDirectoryList {
+        @include u-flex;
     }
 
 

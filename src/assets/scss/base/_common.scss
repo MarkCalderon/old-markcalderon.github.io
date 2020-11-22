@@ -76,34 +76,3 @@ TEXT ALIGNMENTS
 .txt--j {
     text-align: justify;
 }
-
-/* --------------
-FLEX BOX MODEL
----------------*/
-
-.flex__field {
-    @include dFlexValue;
-
-    /* --------
-    FLEX OPTIONS
-    ---------*/
-    &.--sa {
-        justify-content: space-around;
-    }
-    &.--fs {
-        justify-content: flex-start;
-    }
-    &.--fe {
-        justify-content: flex-end;
-    }
-    &.--fc {
-        justify-content: center;
-    }
-    &.--vc {
-        align-items: center;
-    }
-    &.--cboth {
-        justify-content: center;
-        align-items: center;
-    }
-}
