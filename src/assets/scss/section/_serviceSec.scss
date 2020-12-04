@@ -1,5 +1,4 @@
 .serviceSec {
-	display: none;
 	margin-top: 65px;
 	padding: 200px 0;
 	position: relative;
@@ -34,7 +33,7 @@
 	}
 	
 	&__serviceList {
-		@include u-flex;
+		@include u-flex($jc: center, $fw: nowrap);
 		@include media(768px) {
 			flex-direction: column;
 			align-items: center;

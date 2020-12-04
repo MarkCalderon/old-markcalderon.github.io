@@ -1,0 +1,74 @@
+.projectSec {
+	$this: &;
+	box-sizing: border-box;
+	padding: 80px 50px;
+	width: 100%;
+	background: $white;
+	color: black;
+	position: relative;
+	@include z-index(onTop);
+	@include media(768px) {
+		padding: 20px;
+	}
+
+	&__headerText {
+		font: 500 50px $fontFamily;
+		letter-spacing: .01em;
+		text-align: right;
+	}
+
+	&__list {
+		margin-top: 50px;
+		@include u-flex($jc: flex-end, $fw: nowrap);
+	}
+
+	&__listItem {
+		width: calc(100% / 3 - 150px);
+		min-width: 100px;
+		height: 200px;
+		overflow: hidden;
+		position: relative;
+		border-top-right-radius: 15px;
+		cursor: pointer;
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+		@include media(768px) {
+			width: 100%;
+		}
+		
+		
+		&:hover {
+		
+			#{$this}__listItemImageThumb  {
+				transform: scale(1.1);
+			}
+		}
+	
+
+	}
+
+	&__listItemTitleText {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background: white;
+		padding-top: 10px;
+		font-size: 30px;
+	}
+
+	&__listItemImageArea {
+		width: 100%;
+		height: 250px;
+	}
+
+	&__listItemImageThumb {
+		transition: 1s ease;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: top center;
+		background-repeat: no-repeat;
+	}
+}

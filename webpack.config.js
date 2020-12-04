@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlBeautifyPlugin = require('html-beautify-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = {
     mode: "development",
@@ -11,12 +12,12 @@ module.exports = {
     devtool: 'source-map',
     // Files that you want to process.
     entry: [
-        "./src/assets/scss/main.scss",
-        "./src/core/Index.js"
+        path.resolve(__dirname, 'src/assets/scss/main.scss'),
+        path.resolve(__dirname, 'src/core/Index.js')
     ],
     // Set the build output directory
     output: {
-        path: path.resolve(__dirname, './dist/'),
+        path: path.resolve(__dirname, 'dist/'),
         // Webpack will always output a js.
         filename: 'assets/js/[name].js'
     },
@@ -29,7 +30,7 @@ module.exports = {
         // #watchContentBase: true, // (On by default)
         // Set where the server will serve assets from/similar to public_html/.
         // Set to SRC when serving for HOT (*Not suitable for Production)
-        contentBase: path.resolve(__dirname, './src/'),
+        contentBase: path.resolve(__dirname, 'src/'),
         // Compress assets using gzip compression.
         compress: true,
         // Show logs on Dev Tools.
@@ -37,15 +38,15 @@ module.exports = {
         // Disables live reloading
         liveReload: false,
         // Hot Module Replacement: Loads changes dynamically without reloading page.
-        hot: true, // (On by default)
+        hot: false, // (On by default)
         // Observes if there are any changes on the contentBase path.
         watchOptions: { 
             aggregateTimeout: 300,
-            poll: true,
+            poll: 1000,
             ignored: '/node_modules/',
         },
         // Opens a browser, after successfull build.
-        open: true,
+        open: false,
         // Sets where the assets are served from.
         publicPath: '/',
         // Server Port
@@ -57,12 +58,25 @@ module.exports = {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
             "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
-        }
+        },
     },
     plugins: [
+        new BrowserSyncPlugin({
+              host: 'localhost',
+              port: 3100,
+              proxy: 'http://localhost:9000/',
+            },
+            // plugin options
+            {
+              // prevent BrowserSync from reloading the page
+              // and let Webpack Dev Server take care of this
+            //   reload: false,
+              injectChanges: true,
+        }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './src/pug/index.pug',
+            inject: false,
+            template: path.resolve(__dirname, 'src/pug/index.pug'),
         }),
         new HtmlBeautifyPlugin({
             config: {
@@ -86,8 +100,8 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 { 
-                    from: path.resolve(__dirname, './src/assets/img'), 
-                    to: path.resolve(__dirname, './dist/assets/img'),
+                    from: path.resolve(__dirname, 'src/assets/img'), 
+                    to: path.resolve(__dirname, 'dist/assets/img'),
                 },
             ],
             options: {

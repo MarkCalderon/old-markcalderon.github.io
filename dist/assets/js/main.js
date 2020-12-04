@@ -32823,6 +32823,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _section_KVSec__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./section/KVSec */ "./src/components/top/section/KVSec.js");
 /* harmony import */ var _section_ServiceSec__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./section/ServiceSec */ "./src/components/top/section/ServiceSec.js");
 /* harmony import */ var _section_StatSec__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./section/StatSec */ "./src/components/top/section/StatSec.js");
+/* harmony import */ var _section_ProjectSec__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./section/ProjectSec */ "./src/components/top/section/ProjectSec.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32850,6 +32851,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var TopPage = /*#__PURE__*/function (_React$Component) {
   _inherits(TopPage, _React$Component);
 
@@ -32866,7 +32868,7 @@ var TopPage = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
         className: "mainSection"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_section_KVSec__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_section_ServiceSec__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_section_StatSec__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_section_KVSec__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_section_ServiceSec__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_section_StatSec__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_section_ProjectSec__WEBPACK_IMPORTED_MODULE_4__["default"], null));
     }
   }]);
 
@@ -32909,6 +32911,62 @@ var KvSec = function KvSec() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (KvSec);
+
+/***/ }),
+
+/***/ "./src/components/top/section/ProjectSec.js":
+/*!**************************************************!*\
+  !*** ./src/components/top/section/ProjectSec.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var projectItem = [{
+  id: 0,
+  backgroundImage: 'http://lorempixel.com/g/450/250/sports/1',
+  title: 'PROJECT CONTACT'
+}, {
+  id: 1,
+  backgroundImage: 'http://lorempixel.com/g/450/250/sports/2',
+  title: 'PROJECT X'
+}, {
+  id: 2,
+  backgroundImage: 'http://lorempixel.com/g/450/250/sports/3',
+  title: 'CLOTHING LP SITE'
+}];
+
+var ProjectSec = function ProjectSec() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "projectSec"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "projectSec__headerText"
+  }, "PROJECTS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "projectSec__inner"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "projectSec__list"
+  }, projectItem.map(function (item, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: i,
+      className: "projectSec__listItem"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", {
+      className: "projectSec__listItemImageArea"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "projectSec__listItemImageThumb",
+      style: {
+        backgroundImage: 'url(' + item.backgroundImage + ')'
+      }
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+      className: "projectSec__listItemTitleText"
+    }, item.title));
+  }))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProjectSec);
 
 /***/ }),
 
@@ -33125,8 +33183,8 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./src/assets/scss/main.scss */"./src/assets/scss/main.scss");
-module.exports = __webpack_require__(/*! ./src/core/Index.js */"./src/core/Index.js");
+__webpack_require__(/*! G:\Workspace\markcalderon.github.io\src\assets\scss\main.scss */"./src/assets/scss/main.scss");
+module.exports = __webpack_require__(/*! G:\Workspace\markcalderon.github.io\src\core\Index.js */"./src/core/Index.js");
 
 
 /***/ })
