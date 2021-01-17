@@ -21,7 +21,6 @@ const projectItem = [
     },
 ]
 
-
 const ProjectSec = () => {
     return (
         <section className="projectSec">
@@ -31,10 +30,12 @@ const ProjectSec = () => {
                 {
                         projectItem.map((item, i) => (
                             <div key={i} className="projectSec__listItem">
-                                <figure className="projectSec__listItemImageArea">
-                                    <div className="projectSec__listItemImageThumb" style={{backgroundImage: 'url(' + item.backgroundImage + ')'}}></div>
-                                </figure>
-                                <h4 className="projectSec__listItemTitleText">{item.title}</h4>
+                                <a href={item.url} target="_blank">
+                                    <figure className="projectSec__listItemImageArea">
+                                        <div className="projectSec__listItemImageThumb" style={{backgroundImage: 'url(' + item.backgroundImage + ')'}}></div>
+                                    </figure>
+                                    <h4 className="projectSec__listItemTitleText">{item.title}</h4>
+                                </a>
                             </div>
                         ))
                     }

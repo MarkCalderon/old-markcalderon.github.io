@@ -6,8 +6,9 @@ import Footer from '../components/common/Footer'
 
 import TopPage from '../components/top/TopPage'
 
-export default class App extends React.Component {
+import './Common.js'
 
+export default class App extends React.Component {
     render() {
         return (
             <Router>

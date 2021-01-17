@@ -19,11 +19,15 @@ const ServiceItems = [
 ]
 
 const ServiceSec = () => {
+
     return (
         <section className="serviceSec">
             <h2 className="serviceSec__behindText">SERVICE</h2>
             <div className="serviceSec__inner">
                 <div className="serviceSec__serviceList">
+                <div className="ldBar" data-value="50"></div>
+                <div className="ldBar" data-value="70"></div>
+                <div className="ldBar" data-value="50"></div>
                     {
                         ServiceItems.map((item, i) => (
                             <div key={i} className="serviceSec__serviceListItem">

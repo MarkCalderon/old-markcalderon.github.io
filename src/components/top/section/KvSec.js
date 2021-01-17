@@ -1,6 +1,15 @@
 import React from 'react'
 
+const scrollParallax = () => {
+    window.addEventListener('scroll', () => {
+        let distance = window.scrollY
+        document.querySelector('.kvSec__innerImageThumb').style.transform = `translateY(${distance * 0.5}px)`
+    })
+}
+
+
 const KvSec = () => {
+    scrollParallax()
     return (
         <section className="kvSec">
             <div className="kvSec__inner">
