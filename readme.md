@@ -2,9 +2,9 @@
 ## Project Details ##
 ```
 Project Name: Mark Calderon Portfolio
-Repository URL: https://XXXXX@bitbucket.org/commude_git/REPLACED.git
-Trello URL: 
-Director: 
+Repository URL: https://github.com/MarkCalderon/markcalderon.github.io
+Trello URL: N/A
+Director: N/A
 ```
 
 ## Features
@@ -12,7 +12,4 @@ Director:
 *BEM Compliant
 *SCSS(SASS)
 *PUGJS
-*CSS Design inspired by 
-Bootstrap class naming 
-convention
 ```
